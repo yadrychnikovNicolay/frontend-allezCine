@@ -125,6 +125,11 @@ button#send {
 
 
 /* Doing stuff */
+.movie-item{
+  padding-bottom: 10px;
+  text-align: center;
+}
+
 h1{
   font-family: 'Josefin Slab', serif;
   text-align: center;
@@ -213,6 +218,15 @@ input,textarea{
 .goodieThree:hover{
   opacity: 0.5;
 }
+
+/* .films{
+  display: flex;
+  flex-direction: column;
+}
+.slider{
+  flex-direction: row;
+  display: flex;
+} */
 
 
 /* The Modal (background) */
