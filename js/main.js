@@ -7,10 +7,7 @@ $(document).ready(function(){
   slidesToShow: 3,
   slidesToScroll: 3,
   arrows: true,
-
-
 });
-
 
   $('.bio').slick({
     dots: true,
@@ -32,14 +29,6 @@ if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)
 
 }
 
-
-  //JS queries -------------------------------------------------------------------
-//   if (window.matchMedia("(max-width: 480px)").matches) {
-//         $("#wholePage").removeClass("container-fluid");
-//         $("#pageElements").removeClass("container").addClass("container-fluid");
-//
-// }
-
 //counting clicks --------------------------------------------------------------------
 let count = 1;
 $(window).on("click", function(){
@@ -58,11 +47,6 @@ let checkEaster = function(){
   window.alert("You found the easter egg! your total clicks on this page is " + count)
 }
 }
-
-
-
-
-
 
 //back to top -------------------------------------------------------------------
 if ($('#back-to-top').length) {
@@ -185,64 +169,3 @@ $(".goodieTwo").on("click", function(){
 $(".goodieThree").on("click", function(){
   window.open("https://www.ebay.com/itm/Handmade-Kill-Bill-Brides-Samurai-Katana-Sword-w-Display-Stand-Cleaning-Kits-/202117681975");
 })
-
-
-
-// $(document).ready(function(){
-//
-//   var showHeaderAt = 150;
-//
-//   var win = $(window),
-//       body = $('body');
-//
-//   // Show the fixed header only on larger screen devices
-//
-//   if(win.width() > 600){
-//
-//     // When we scroll more than 150px down, we set the
-//     // "fixed" class on the body element.
-//
-//     win.on('scroll', function(e){
-//
-//       if(win.scrollTop() > showHeaderAt) {
-//         body.addClass('fixed');
-//       }
-//       else {
-//         body.removeClass('fixed');
-//       }
-//     });
-//
-//   }
-//
-// });
-
-// $('.txt').html(function(i, html) {
-//   var chars = $.trim(html).split("");
-//
-//   return '<span>' + chars.join('</span><span>') + '</span>';
-// });
-
-// $(document).ready(function () {
-//     $(window).on('load scroll', function () {
-//         var scrolled = $(this).scrollTop();
-//         $('#title').css({
-//             'transform': 'translate3d(0, ' + -(scrolled * 0.2) + 'px, 0)', // parallax (20% scroll rate)
-//             'opacity': 1 - scrolled / 400 // fade out at 400px from top
-//         });
-//         $('#hero-vid').css('transform', 'translate3d(0, ' + -(scrolled * 0.25) + 'px, 0)'); // parallax (25% scroll rate)
-//     });
-//
-//     // video controls
-//     $('#state').on('click', function () {
-//         var video = $('#hero-vid').get(0);
-//         var icons = $('#state > span');
-//         $('#overlay').toggleClass('fade');
-//         if (video.paused) {
-//             video.play();
-//             icons.removeClass('fa-play').addClass('fa-pause');
-//         } else {
-//             video.pause();
-//             icons.removeClass('fa-pause').addClass('fa-play');
-//         }
-//     });
-    // });
