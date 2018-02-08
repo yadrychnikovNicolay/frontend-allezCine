@@ -141,6 +141,11 @@ $(".bioLink").click(function() {
       scrollTop: $(".bio").offset().top},
       'slow');
 });
+  $(".filmLink").click(function(){
+  $('html,body').animate({
+      scrollTop: $(".films").offset().top},
+      'slow');
+});
 
 
 $(".photoLink").click(function() {
