@@ -7,7 +7,10 @@ $(document).ready(function(){
   slidesToShow: 3,
   slidesToScroll: 3,
   arrows: true,
+
+
 });
+
 
   $('.bio').slick({
     dots: true,
@@ -20,6 +23,19 @@ $(document).ready(function(){
 
   });
 
+
+  //films
+  $(".movie-item").click(function() {
+  let title = $(this).attr('data-title');
+  let year = $(this).attr('data-year');
+  let trailer = $(this).attr('data-trailer');
+  let synopsis = $(this).attr('data-synopsis');
+  $(".title").text(title);
+  $(".year").text("year : " + year);
+  $(".modal-body").html('<div class="embed-responsive embed-responsive-16by9"><<iframe width=450 height=250 src="' + trailer + '" frameborder="0" encrypted-media allowfullscreen></iframe></div>');
+  $(".modal-body").append("<div class=synopsis>" + synopsis + "</div>");
+});
+
   //iphone queries
 if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
 
@@ -28,6 +44,14 @@ if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)
     }
 
 }
+
+
+  //JS queries -------------------------------------------------------------------
+//   if (window.matchMedia("(max-width: 480px)").matches) {
+//         $("#wholePage").removeClass("container-fluid");
+//         $("#pageElements").removeClass("container").addClass("container-fluid");
+//
+// }
 
 //counting clicks --------------------------------------------------------------------
 let count = 1;
@@ -47,6 +71,11 @@ let checkEaster = function(){
   window.alert("You found the easter egg! your total clicks on this page is " + count)
 }
 }
+
+
+
+
+
 
 //back to top -------------------------------------------------------------------
 if ($('#back-to-top').length) {
@@ -112,6 +141,8 @@ $(".bioLink").click(function() {
       scrollTop: $(".bio").offset().top},
       'slow');
 });
+
+
 $(".photoLink").click(function() {
   $('html,body').animate({
       scrollTop: $(".photo").offset().top},
